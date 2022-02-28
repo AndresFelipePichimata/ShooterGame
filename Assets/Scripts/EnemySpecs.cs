@@ -43,9 +43,9 @@ public class EnemySpecs : MonoBehaviour
         GameObject go = other.gameObject;
         if (go.tag == "Bullet")
         {
-         hp--;
+            hp--;
         }
-        if (hp == 0)
+        if (hp == 0 || go.tag == "ChargedBullet")
         {
             Destroy(this.gameObject);
         }
